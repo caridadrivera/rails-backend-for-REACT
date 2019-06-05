@@ -1,13 +1,18 @@
-class FriendshipsController < ApplicationController
+class Api::V1::FriendshipsController < ApplicationController
+
+  def index
+    friendships = Friendship.all
+    render json: friendships
+  end
+
 
   def new
     @users = User.all
     @friendship = Friendship.new
-
   end
 
   def show
-    render json: user
+    render json: friendship
   end
 
   def create
