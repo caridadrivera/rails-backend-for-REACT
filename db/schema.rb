@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_05_155338) do
+ActiveRecord::Schema.define(version: 2019_06_11_000626) do
 
   create_table "friendships", force: :cascade do |t|
     t.integer "user_id"
@@ -26,11 +26,12 @@ ActiveRecord::Schema.define(version: 2019_06_05_155338) do
     t.integer "user_id"
     t.text "content"
     t.string "image_url"
+    t.string "title"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "password"
+    t.string "password_digest"
   end
 
 end

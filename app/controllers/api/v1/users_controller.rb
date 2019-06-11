@@ -11,7 +11,7 @@ class Api::V1::UsersController < ApplicationController
 
   def create
     # byebug
-    user = User.find_or_create_by(user_params)
+    user = User.create(user_params)
     render json: user
   end
 
