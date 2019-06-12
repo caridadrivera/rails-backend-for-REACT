@@ -10,15 +10,12 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create
-    # byebug
-    user = User.create(user_params)
+     # byebug
+    user = User.create(username: params[:username], password: params[:password])
     render json: user
   end
 
   private
 
-  def user_params
-    params.require(:user).permit(:username, :password)
-  end
 
 end
