@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
        resources :users, :only => [:index, :show, :create]
        post '/auth', to: 'auth#create'
-
+       get '/current_user', to: 'auth#show'
+       get '/refresh', to: 'auth#refresh'
        get "/friendships/:friend_id/new", to: "friendships#create"
 
 

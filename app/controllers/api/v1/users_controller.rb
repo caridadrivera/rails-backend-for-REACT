@@ -11,11 +11,13 @@ class Api::V1::UsersController < ApplicationController
 
   def create
      # byebug
-    user = User.create(username: params[:username], password: params[:password])
+    user = User.new(username: params[:username], password: params[:password])
+  if user.valid?
+    user.save
     render json: user
+  else
+   flash[:notice] = "You need to enter all info!"
   end
-
-  private
-
+end
 
 end

@@ -1,7 +1,7 @@
 class Api::V1::LikesController < ApplicationController
 
   def index
-    posts = Like.alls
+    likes= Like.all
     render json: likes
   end
 
