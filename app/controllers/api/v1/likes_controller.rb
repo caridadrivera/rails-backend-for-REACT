@@ -1,7 +1,7 @@
 class Api::V1::LikesController < ApplicationController
 
   def index
-    likes= Like.all
+    likes = Like.all
     render json: likes
   end
 
@@ -10,7 +10,7 @@ class Api::V1::LikesController < ApplicationController
   end
 
   def create
-
+    # byebug
     like = Like.create(like_params)
     render json: like
   end

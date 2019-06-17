@@ -8,10 +8,14 @@ class Api::V1::PostsController < ApplicationController
     post = Post.new
   end
 
-  def create
+  # def show
+  #   post = Post.find_by(post.id)
+  # end
 
+  def create
     post = Post.create(post_params)
     render json: post
+     # byebug
   end
 
   def post_params
