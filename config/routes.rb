@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
        resources :friendships
        resources :likes
-       resources :posts
+       resources :posts, :only => [:index, :show, :create, :destroy]
 
 
     end

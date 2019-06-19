@@ -14,7 +14,7 @@ class Api::V1::UsersController < ApplicationController
     user = User.new(username: params[:username], password: params[:password])
   if user.valid?
     user.save
-    render json: user
+    render json: {id: user.id, username: user.username, token: issue_token({id: user.id})}
   else
    flash[:notice] = "You need to enter all info!"
   end

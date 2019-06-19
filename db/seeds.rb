@@ -7,11 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+User.create(username: "cari", password:"123")
+User.create(username: "vera", password:"123")
+User.create(username: "ronnie", password:"123")
 
-User.create(username: "cari@aol.com", password:"123")
-User.create(username: "ca@aol.com", password:"123")
-User.create(username: "ri@aol.com", password:"123")
 
-# Friendship.create()
-Post.create(user_id: 1, content:"love this place", image_url: "https://tat.imgix.net/attachments/global/1406756136_original.jpeg?w=640&h=480&fit=crop&crop=entropy&auto=format,enhance&q=60", title:"when in Italy")
-Post.create(user_id: 1, content:"love this place", image_url: "https://tat.imgix.net/attachments/global/1406756136_original.jpeg?w=640&h=480&fit=crop&crop=entropy&auto=format,enhance&q=60", title:"when in Italy")
+Friendship.create(user_id: 1, friend_id: 2)
+Friendship.create(user_id: 2, friend_id: 3)
